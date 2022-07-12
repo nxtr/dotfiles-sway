@@ -33,6 +33,9 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
+output eDP-1 scale 2 pos 1920 345
+output DP-1 scale 2 pos 0 0
+
 ### Idle configuration
 #
 # Example configuration:
