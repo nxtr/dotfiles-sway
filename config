@@ -204,6 +204,10 @@ input type:touchpad {
 #
     bindsym $mod+semicolon exec loginctl lock-session
 #
+# Clipboard:
+#
+    exec wl-paste -t text --watch clipman store --no-persist
+#
 # Resizing containers:
 #
 mode "resize" {
