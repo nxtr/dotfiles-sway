@@ -242,6 +242,10 @@ mode "resize" {
 
     bindsym $mod+Return mode "default"
     bindsym $mod+Escape mode "default"
+
+    # Recenter and resize floating window in focus
+    bindsym semicolon exec "swaymsg move position center; swaymsg resize set 80ppt 80ppt"
+    bindsym $mod+semicolon exec "swaymsg move position center; swaymsg resize set 80ppt 80ppt"
 }
 bindsym $mod+r mode "resize"
 
