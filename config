@@ -198,6 +198,11 @@ input type:touchpad {
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
     bindsym $mod+minus scratchpad show
+
+#
+# Lock-session:
+#
+    bindsym $mod+semicolon exec loginctl lock-session
 #
 # Resizing containers:
 #
