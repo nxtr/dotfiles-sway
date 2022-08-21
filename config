@@ -253,7 +253,11 @@ mode "resize" {
     bindsym $mod+semicolon exec "swaymsg move position center; swaymsg resize set 80ppt 80ppt"
 }
 bindsym $mod+r mode "resize"
-
+#
+# Border:
+#
+    default_border pixel 2
+    bindsym $mod+Shift+b border toggle
 #
 # Status Bar:
 #
