@@ -197,6 +197,12 @@ input 1:1:AT_Translated_Set_2_keyboard {
     # Moves focus to the last-focused child of the focused container
     bindsym $mod+c focus child
 #
+# Brightness:
+#
+    exec bash -c 'brightnessctl -l -c backlight -m | cut -d , -f1 | while IFS= read -r dev; do brightnessctl -d $dev s 50%; done'
+    bindsym $mod+i exec bash -c 'brightnessctl -l -c backlight -m | cut -d , -f1 | while IFS= read -r dev; do brightnessctl -d $dev s 10%+; done'
+    bindsym $mod+u exec bash -c 'brightnessctl -l -c backlight -m | cut -d , -f1 | while IFS= read -r dev; do brightnessctl -d $dev s 10%-; done'
+#
 # Scratchpad:
 #
     # Sway has a "scratchpad", which is a bag of holding for windows.
