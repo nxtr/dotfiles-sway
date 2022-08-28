@@ -273,6 +273,13 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 #
+# Gaps:
+#
+    set $horizontal_gaps 480
+    gaps horizontal $horizontal_gaps
+    smart_gaps inverse_outer
+    bindsym $mod+g gaps horizontal current toggle $horizontal_gaps
+#
 # Border:
 #
     default_border pixel 2
