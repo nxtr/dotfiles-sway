@@ -98,6 +98,11 @@ input type:pointer {
     dwt enabled
 }
 
+input type:keyboard {
+      xkb_layout "us,se"
+      xkb_options "grp:rctrl_toggle,ctrl:swapcaps"
+}
+
 input 1:1:AT_Translated_Set_2_keyboard {
       xkb_layout "us,se"
       xkb_options "grp:rctrl_toggle,ctrl:swap_lwin_lctl"
