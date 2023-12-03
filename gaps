@@ -1,0 +1,3 @@
+#!/bin/bash
+
+echo $(($1 * $(swaymsg -t get_outputs -r | jq -r '.[] | select(.focused==true).current_mode.width') / 100))
