@@ -61,11 +61,19 @@ exec_always "pkill kanshi; kanshi"
 
 exec_always killall swayidle
 
+set $idle_dim 240
+set $idle_lock 300
+set $idle_off 330
+set $idle_off2 10
+
 exec_always swayidle -w \
-     timeout 300 'swaylock -c ff0000 -e -k -l -f' \
-     timeout 310 'swaymsg "output * dpms off"' \
-     timeout 10 'if pgrep -x swaylock; then swaymsg "output * dpms off"; fi' \
-     resume 'swaymsg "output * dpms on"' \
+     timeout $idle_dim 'brightnessctl --save; brightnessctl set 5%' \
+          resume 'brightnessctl --restore' \
+     timeout $idle_lock 'swaylock -c ff0000 -e -k -l -f' \
+     timeout $idle_off 'swaymsg "output * dpms off"' \
+          resume 'swaymsg "output * dpms on"' \
+     timeout $idle_off2 'if pgrep -x swaylock; then swaymsg "output * dpms off"; fi' \
+          resume 'swaymsg "output * dpms on"' \
      before-sleep 'swaylock -c 0000ff -e -k -l -f' \
      after-resume 'swaymsg "output * dpms on"' \
      lock 'swaylock -c 00ff00 -e -k -l -f' \
