@@ -1,0 +1,3 @@
+#!/bin/bash
+
+fuzzel -b 000000ff -l 0 -d --password -p "$1" <&- && echo
