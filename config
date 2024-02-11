@@ -214,6 +214,8 @@ input 7504:24868:Ultimate_Gadget_Laboratories_UHK_60_v2 {
     bindsym $mod+Control+Shift+$left move workspace to output left
     bindsym $mod+Control+Shift+$down move workspace to output down
     bindsym $mod+Control+Shift+$up move workspace to output up
+
+    workspace_auto_back_and_forth yes
 #
 # Layout stuff:
 #
